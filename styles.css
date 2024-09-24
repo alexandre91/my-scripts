@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@media print {
+  @page {
+    size: A4;
+  }
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    margin: 0px;
+  }
+
+h2 {
+font-size: 20pt;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+h4 {
+  font-size: 14pt;
+}
+
+h5 {
+  font-size: 13pt;
+}
+
+h6 {
+  font-size: 12pt;
+}
+
+.centralizado{
+    text-align: center;
+}
+
+span.centralizado{
+  text-align: center;
+  display: block;
+}
+
+.citacao {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-left: 60pt;
+  text-indent: 0pt;
+  text-align: justify;
+  /* Outras propriedades de estilo que você pode adicionar conforme necessário */
+}
+
+.text-right{  
+  text-align: right;
+}
+
+img {
+  max-width: 16cm;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.limited-size {
+  width: 200px;
+}
+
+img.limited-size-12cm {
+  max-width: 12cm;
+}
+
+img.limited-size-10cm {
+  max-width: 10cm;
+}
+
+img.limited-size-8cm {
+  max-width: 8cm;
+}
+
+.font-blue{
+  color: #0000bb;
+}
+.font-green{
+  color: #008000;
+}
+.font-purple{
+  color: #8000bb;
+}
+.font-red{
+  color: #ff0000;
+}
+.font-yellow{
+  color: #ffdd00;
+}
+
+p {
+    font-size: 10pt;
+    color: #000000;
+    font-family: "Arial";
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+    text-indent: 35pt;
+    line-height: 1.15;
+    orphans: 2;
+    widows: 2;
+    text-align: justify
+}
+
+b {
+font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 16cm;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 10pt;
+}
+
+th, td {
+    text-align: left;
+    /* padding: 3px; */
+    /* padding: 8px; */
+    border: 0.75px solid #ddd;
+}
+
+table th {
+    background-color: #D9EAD3;
+}
+
+tr:nth-child(even) td:not(.separator)
+{
+  background-color: #f2f2f2
+}
+
+
+table.dicas th
+{
+  background-color: #a3c0ff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container table {
+  /* Estilos específicos para tabelas dentro de .container */
+  margin: 10px;
+  border-collapse: collapse;
+  /* Outros estilos específicos para tabela */
+}
+
+.container th, 
+.container td {
+  /* Estilos específicos para th e td dentro de .container */  
+  padding: 5px;
+  text-align: left;
+  /* Outros estilos específicos para th e td */
+}
+
+.separator {
+  border: none;
+  background-color: transparent; /* Remove a cor de fundo */
+  width: 40px; /* Ajusta a largura da coluna separadora */
+}
+
+/* Aplica estilos específicos para células na coluna separadora */
+.separator th, .separator td{
+  background-color: transparent;
+  border: none;
+}
+
+li.h3-nao-numerado {
+  font-size: 1.17em;
+  display: list-item;
+  margin-top: 6pt;
+}
+
+.h3-nao-numerado {
+  display: block;
+  font-size: 14pt;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 6pt;
+  font-weight: bold;
+}
+
+.link-fonte{
+    color: #000000;
+    font-size: 8pt;
+    text-decoration:none;
+}
+
+body {
+  counter-reset: h2; /*css com contadores para numeração das tags h2 a h6*/
+}
+h2 {
+  counter-reset: h3;
+}
+h3 {
+  counter-reset: h4;
+}
+h4 {
+  counter-reset: h5;
+}
+h5 {
+  counter-reset: h6;
+}
+
+/*css com contadores para numeração das tags h2 a h6*/
+h2:before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+}
+h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) ". ";
+}
+h4:before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+h5:before {
+  counter-increment: h5;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+h6:before {
+  counter-increment: h6;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+
+.sem-numeracao:before {
+  content: none;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-16 {
+  font-size: 16pt;  
+}
+
+.font-14 {
+  font-size: 14pt;  
+}
+
+.font-12 {
+  font-size: 12pt;  
+}
+
+.font-10 {
+  font-size: 12pt;  
+}
+
+.font-8{
+  font-size: 8pt;
+}
+
+.referencia{
+  font-size: 8pt;
+}
+
+ol li {
+  margin-top: 6pt;
+  margin-bottom: 6pt;
+  text-align: justify;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+ul li {
+  margin-top: 6pt;
+  margin-bottom: 6pt;
+  text-align: justify;
+  }
+  
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #D9EAD3;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 9pt;
+    line-height: 1.6;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    max-width: 100%;
+    overflow: auto;
+    display: block;
+    word-wrap: break-word;
+}
+
+.external-link-icon {
+  display: inline;
+  margin-left: 5px;  /* Ajuste conforme necessário */
+  margin-right: 5px;  /* Ajuste conforme necessário */
+  vertical-align: middle; /* Alinha a imagem verticalmente em relação ao texto ao lado */
+  width: 16px;
+}
+
+.border-box {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px 0;
+}
